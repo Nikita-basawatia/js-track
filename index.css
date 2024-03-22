@@ -1,0 +1,39 @@
+.input-container {
+   display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#header{
+    background-color: rgb(150, 190, 89);
+    margin-bottom: 20px;
+}
+.input-container label {
+    margin-top: 5px;
+    text-align: left;
+   width: 80px;
+}
+
+.input-containerb{
+    text-align: left;
+}
+
+
+#A{
+    width : 99%;
+    height: 120px;
+    margin-top: 10px;
+}
+form{
+    background-color: rgb(206, 230, 170);
+}
+#note{
+    text-align: center;
+
+}
+#bt{
+    text-align: center;
+
+}
+body {
+    text-align: center;
+}
