@@ -1,7 +1,7 @@
 class Validation {
-  constructor(myform, submitbt) {
-    this.form = document.getElementById(myform);
-    this.submitBtn = document.getElementById(submitbt);
+  constructor(formId, submitButtonId) {
+    this.form = document.getElementById(formId);
+    this.submitBtn = document.getElementById(submitButtonId);
   }
 
   init() {
@@ -9,48 +9,52 @@ class Validation {
   }
 
   submitform() {
-    this.submitBtn.addEventListener("click", this.validateinput.bind(this));
+    this.submitBtn.addEventListener("click", this.validateInput.bind(this));
   }
 
-  validateinput(event) {
+  validateInput(event) {
     event.preventDefault();
 
     const inputs = this.form.getElementsByTagName("input");
 
     for (const input of inputs) {
-      console.log("vghj");
       if (input.value === "") {
-        alert(`${input.name} is empty`);
+        alert(`${input.getAttribute("name")} is empty`);
         return;
       }
 
-      if (input.name == "email") {
-        console.log("vghj");
-        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailPattern.test(input.value)) {
+      if (input.getAttribute("name") === "email") {
+        if (!this.validateEmail(input.value)) {
           input.style.borderColor = "red";
-          alert("Please enter a valid email, not an email address.");
+          alert("Please enter a valid email.");
           return;
         }
       }
 
-      if (input.name == "homepage") {
-        console.log("tyuij");
-        var urlPattern =
-          /^(https?:\/\/)?([\w.-]+)\.([a-zA-Z]{2,6})(\/[\w.-]*)*\/?$/;
-
-        if (!urlPattern.test(input.value)) {
-          alert("Please enter a valid Url, not an url.");
+      if (input.getAttribute("name") === "homepage") {
+        if (!this.validateURL(input.value)) {
+          alert("Please enter a valid URL.");
           input.style.borderColor = "red";
           return;
         }
       }
     }
     this.form.submit();
-    alert("form submitted");
+    alert("Form submitted");
+  }
+
+  validateEmail(email) {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailPattern.test(email);
+  }
+
+  validateURL(url) {
+    const urlPattern =
+      /^(https?:\/\/)?([\w.-]+)\.([a-zA-Z]{2,6})(\/[\w.-]*)*\/?$/;
+    return urlPattern.test(url);
   }
 }
 
-const formValidator = new Validation("myform", "submitbt");
+const formValidator = new Validation("registrationForm", "submitButton");
 
 formValidator.init();

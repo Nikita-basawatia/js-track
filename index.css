@@ -1,39 +1,38 @@
 .input-container {
-   display: flex;
+    display: flex;
     align-items: center;
     margin-bottom: 10px;
 }
-#header{
+
+.header {
     background-color: rgb(150, 190, 89);
     margin-bottom: 20px;
 }
+
 .input-container label {
     margin-top: 5px;
     text-align: left;
-   width: 80px;
+    width: 80px;
 }
 
-.input-containerb{
+.input-containerb {
     text-align: left;
 }
 
-
-#A{
-    width : 99%;
+#aboutMeInput {
+    width: 99%;
     height: 120px;
     margin-top: 10px;
 }
-form{
+
+form {
     background-color: rgb(206, 230, 170);
 }
-#note{
-    text-align: center;
 
-}
-#bt{
+.note {
     text-align: center;
-
 }
+
 body {
     text-align: center;
 }
