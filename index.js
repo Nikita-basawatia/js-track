@@ -16,25 +16,25 @@ class Validation {
     event.preventDefault();
 
     const inputs = this.form.getElementsByTagName("input");
-
     for (const input of inputs) {
+      const nameAttr = input.getAttribute("name");
+
       if (input.value === "") {
-        alert(`${input.getAttribute("name")} is empty`);
+        alert(`${nameAttr} is empty`);
         return;
       }
 
-      if (input.getAttribute("name") === "email") {
+      if (nameAttr === "email") {
         if (!this.validateEmail(input.value)) {
-          input.style.borderColor = "red";
           alert("Please enter a valid email.");
           return;
         }
       }
 
-      if (input.getAttribute("name") === "homepage") {
+      if (nameAttr === "homepage") {
         if (!this.validateURL(input.value)) {
           alert("Please enter a valid URL.");
-          input.style.borderColor = "red";
+
           return;
         }
       }
