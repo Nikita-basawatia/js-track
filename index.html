@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+
+        <form id="registrationForm" data-form="myFrom" class="formContainer">
+
+        <div class="main">
+            <div id="header" class="header">Registration form</div>
+
+            <div class="input-container">
+                <label for="loginInput">Login ID</label>
+                <input id="loginInput" class="heads" name="login" type="text">
+            </div>
+
+            <div class="input-container">
+                <label for="emailInput">Email</label>
+                <input id="emailInput" class="heads" name="email" type="text">
+            </div>
+
+            <div class="input-container">
+                <label for="nameInput">Name</label>
+                <input id="nameInput" class="heads" name="name" type="text">
+            </div>
+
+            <div class="input-container">
+                <label for="timezoneSelect">Timezone</label>
+                <select id="timezoneSelect" name="GMT">
+                    <option value="GMT">GMT</option>
+                    <option value="banana">Banana</option>
+                </select>
+            </div>
+
+            <div class="input-container">
+                <label for="homepageInput">Home Page</label>
+                <input id="homepageInput" class="heads" name="homepage" type="text">
+            </div>
+
+            <div class="input-containerb">
+                <label for="aboutMeInput">About me</label>
+                <input id="aboutMeInput" class="heads" name="About me" type="text">
+            </div>
+
+            <input id="notificationCheckbox" type="checkbox">
+            <label for="notificationCheckbox">Receive notification of comments.</label>
+            <p>You will be sent an email when someone posts comments to your blog or album.</p>
+            <p id="passwordnote" class="passwordnote">Your password will be mailed to you.</p>
+            <button id="submitButton">GO</button>
+        </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
