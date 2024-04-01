@@ -55,6 +55,6 @@ class Validation {
   }
 }
 
-const formValidator = new Validation("registrationForm", "submitButton");
+const formValidator = new Validation("myForm", "submitButton");
 
 formValidator.init();
