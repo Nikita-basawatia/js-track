@@ -1,6 +1,6 @@
 class Validation {
   constructor(formId, submitButtonId) {
-    this.form = document.getElementById(formId);
+    this.form = document.querySelector('[data-form="' + formId + '"]');
     this.submitBtn = document.getElementById(submitButtonId);
   }
 
